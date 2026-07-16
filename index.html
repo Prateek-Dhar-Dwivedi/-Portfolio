@@ -9,7 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <style>
+<style>
     *,
     *::before,
     *::after {
@@ -88,9 +88,14 @@
 
     .proj-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 40px;
-      /* Increase this value */
+    }
+
+    @media(max-width:768px) {
+      .proj-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .exp-item {
@@ -608,22 +613,22 @@
     .proj-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.25rem
+      gap: 2rem
     }
 
     .proj-card {
-      background: var(--card);
-      border: .5px solid var(--border);
-      border-radius: 14px;
+      background: linear-gradient(145deg,
+          rgba(26, 34, 54, .95),
+          rgba(17, 24, 39, .95));
+      border: 1px solid rgba(99, 102, 241, .2);
+      border-radius: 20px;
       overflow: hidden;
-      transition: transform .22s, border-color .22s;
-      display: flex;
-      flex-direction: column
+      transition: .35s;
     }
 
     .proj-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--border2)
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(99, 102, 241, .2);
     }
 
     .proj-img {
@@ -695,6 +700,7 @@
       display: flex;
       gap: 1rem
     }
+
     .proj-link {
       font-size: .8rem;
       color: var(--neon3);
@@ -969,6 +975,22 @@
     .footer-links a:hover {
       color: var(--neon3)
     }
+
+    @media(max-width:768px) {
+
+      .hero-title {
+        font-size: 2.7rem;
+      }
+
+      .hero-stats {
+        gap: 1rem;
+      }
+
+      .proj-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
   </style>
 </head>
 
@@ -996,7 +1018,7 @@
     <div class="hero-inner">
       <div class="hero-tag"><span></span> Available for Internships &amp; Part-time Roles</div>
       <h1 class="hero-title">Hi, I'm <span style="color:var(--neon2)">Prateek Dhar Dwivedi</span></h1>
-      <div class="hero-subtitle">AI/ML Engineer </div>
+      <div class="hero-subtitle">AI/ML Engineer • Full Stack Developer • Problem Solver </div>
       <p class="hero-bio">I'm a B.Tech Computer Science (AI/ML) student at NIELIT, combining strong academic foundations
         with real-world experience. In 2025, I interned at EISystems Technologies, where I developed several websites.
         Proficient in HTML, CSS, JavaScript, and Python, I bridge the gap between fullstack engineering and artificial
@@ -1395,7 +1417,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Your Name · Built with HTML &amp; CSS · Designed with ❤️</p>
+    <p>© 2026 Prateek Dhar Dwivedi · Built with HTML &amp; CSS · Designed with ❤️</p>
     <div class="footer-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
