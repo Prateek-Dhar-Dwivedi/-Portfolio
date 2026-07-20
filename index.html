@@ -1173,14 +1173,33 @@
     <h2 class="section-title">Featured Works</h2>
     <p class="section-sub">A selection of projects that demonstrate my skills across AI, ML, Web Development and data
       science.</p>
-    <div class="proj-filter">
-      <button class="pf-btn active" onclick="filterProj(this,'all')">All Projects</button>
+     <div class="proj-filter">
+    <button class="pf-btn active" onclick="filterProj(this,'all')">⭐ All</button>
+
+    <button class="pf-btn" onclick="filterProj(this,'web')">
+        🌐 Web Development
+    </button>
+
+    <button class="pf-btn" onclick="filterProj(this,'fullstack')">
+        🚀 Full Stack
+    </button>
+
+    <button class="pf-btn" onclick="filterProj(this,'ml')">
+        🤖 Machine Learning
+    </button>
+
+    <button class="pf-btn" onclick="filterProj(this,'python')">
+        🐍 Python
+    </button>
+</div>
+    <!-- <div class="proj-filter">
+      <!-- <button class="pf-btn active" onclick="filterProj(this,'all')">All Projects</button> -->
       <!-- <button class="pf-btn" onclick="filterProj(this,'ai')">Web Development</button> -->
       <!-- <button class="pf-btn" onclick="filterProj(this,'nlp')">NLP</button>
-    <button class="pf-btn" onclick="filterProj(this,'data')">Data Science</button> -->
-    </div>
+    <button class="pf-btn" onclick="filterProj(this,'data')">Data Science</button>
+   </div> -->
     <div class="proj-grid" id="projGrid">
-      <div class="proj-card" data-cat="nlp">
+      <div class="proj-card" data-cat="web">
         <div class="proj-img"><img src="ProjectPic/Portfolio.png" alt="Portfolio Website"></div>
         <div class="proj-body">
           <div class="proj-cat">Web Development</div>
@@ -1203,7 +1222,7 @@
           </div>
         </div>
       </div>
-      <div class="proj-card" data-cat="web">
+      <div class="proj-card" data-cat="fullstack web">
         <div class="proj-img"><img src="ProjectPic/UReact.png" alt="MERN Website"></div>
         <div class="proj-body">
           <div class="proj-cat">Full Stack Web Development</div>
@@ -1227,7 +1246,7 @@
           </div>
         </div>
       </div>
-      <div class="proj-card" data-cat="web">
+      <div class="proj-card" data-cat="python web">
         <div class="proj-img"><img src="ProjectPic/UPython.png" alt="Python Website"></div>
         <div class="proj-body">
           <div class="proj-cat">Python Web Development</div>
@@ -1247,7 +1266,7 @@
           </div>
         </div>
       </div>
-      <div class="proj-card" data-cat="ml">
+      <div class="proj-card" data-cat="ml python fullstack">
         <div class="proj-img"><img src="ProjectPic/Cineora.png" alt="Cineora"></div>
         <div class="proj-body">
           <div class="proj-cat">Full Stack Web Development</div>
@@ -1276,7 +1295,7 @@
           </div>
         </div>
       </div>
-        <div class="proj-card" data-cat="ml">
+        <div class="proj-card" data-cat="fullstack web">
         <div class="proj-img"><img src="ProjectPic/Velora.png" alt="Cineora"></div>
         <div class="proj-body">
           <div class="proj-cat">Full Stack Web Development</div>
