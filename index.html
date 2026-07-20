@@ -1493,12 +1493,26 @@
     });
 
     function filterProj(btn, cat) {
-      document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.proj-card').forEach(c => {
-        c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'flex' : 'none';
-      });
-    }
+
+    document.querySelectorAll('.pf-btn').forEach(b =>
+        b.classList.remove('active')
+    );
+
+    btn.classList.add('active');
+
+    document.querySelectorAll('.proj-card').forEach(card => {
+
+        const categories = card.dataset.cat.split(' ');
+
+        if (cat === 'all' || categories.includes(cat)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+}
   </script>
 </body>
 
