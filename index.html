@@ -582,213 +582,201 @@
       line-height: 1.75
     }
 
-/* =========================
-   PROJECT FILTER
-========================= */
+/* ===========================
+   PROJECT GRID
+=========================== */
 
-.proj-filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-    margin-bottom: 2rem;
+.proj-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:2rem;
+    align-items:stretch;
 }
 
-.pf-btn {
-    background: var(--card);
-    border: .5px solid var(--border);
-    border-radius: 100px;
-    padding: 6px 16px;
-    font-size: .8rem;
-    color: var(--text2);
-    cursor: pointer;
-    transition: .25s;
-    font-family: var(--sans);
+.proj-card{
+    display:flex;
+    flex-direction:column;
+
+    background:#101827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.3s;
 }
 
-.pf-btn:hover,
-.pf-btn.active {
-    background: var(--neon);
-    color: #fff;
-    border-color: var(--neon);
+.proj-card:hover{
+    transform:translateY(-8px);
+    border-color:#4f8cff;
+    box-shadow:0 15px 40px rgba(79,140,255,.15);
 }
 
-/* =========================
-   GRID
-========================= */
+/* IMAGE */
 
-.proj-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 360px));
-    justify-content: center;
-    align-items: stretch;
-    gap: 2rem;
+.proj-img{
+    width:100%;
+    aspect-ratio:16/9;
+    background:#0b1220;
 }
 
-/* =========================
-   CARD
-========================= */
-
-.proj-card {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    max-width: 360px;
-    min-height: 600px;
-
-    background: linear-gradient(
-        145deg,
-        rgba(26,34,54,.95),
-        rgba(17,24,39,.95)
-    );
-
-    border: 1px solid rgba(99,102,241,.2);
-    border-radius: 20px;
-    overflow: hidden;
-
-    transition: .35s;
+.proj-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.proj-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(99,102,241,.2);
+/* BODY */
+
+.proj-body{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+
+    padding:22px;
 }
 
-/* =========================
-   IMAGE
-========================= */
-
-.proj-img {
-    width: 100%;
-    height: 200px;
-    background: #111827;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.proj-cat{
+    color:#38bdf8;
+    font-size:.75rem;
+    text-transform:uppercase;
+    margin-bottom:8px;
 }
 
-.proj-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.proj-title{
+    font-size:1.3rem;
+    font-weight:700;
+    margin-bottom:12px;
 }
 
-/* =========================
-   BODY
-========================= */
+.proj-desc{
+    color:#9ca3af;
+    line-height:1.7;
 
-.proj-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 1.25rem;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:4;
+
+    overflow:hidden;
+
+    min-height:110px;
 }
 
-.proj-cat {
-    font-family: var(--mono);
-    font-size: .68rem;
-    color: var(--cyan);
-    text-transform: uppercase;
-    letter-spacing: .12em;
-    margin-bottom: .5rem;
+.proj-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+
+    margin:20px 0;
+
+    min-height:64px;
 }
 
-.proj-title {
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-bottom: .7rem;
+.ptag{
+    background:rgba(59,130,246,.12);
+    color:#60a5fa;
+
+    padding:5px 10px;
+
+    border-radius:999px;
+
+    font-size:.75rem;
 }
 
-/* =========================
-   DESCRIPTION
-========================= */
+.proj-links{
+    margin-top:auto;
 
-.proj-desc {
-    color: var(--text2);
-    font-size: .85rem;
-    line-height: 1.6;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-
-    margin-bottom: 1rem;
+    display:flex;
+    gap:20px;
 }
 
-/* =========================
-   TAGS
-========================= */
-
-.proj-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-
-    max-height: 58px;
-    overflow: hidden;
-
-    margin-bottom: 1rem;
+.proj-link{
+    color:#60a5fa;
+    text-decoration:none;
+    font-weight:500;
 }
 
-.ptag {
-    background: rgba(34,211,238,.08);
-    border: .5px solid rgba(34,211,238,.2);
-    border-radius: 5px;
-
-    padding: 3px 8px;
-
-    font-family: var(--mono);
-    font-size: .68rem;
-    color: var(--cyan);
+.proj-link:hover{
+    color:#fff;
 }
 
-/* =========================
-   LINKS
-========================= */
+/* ===========================
+   Large Tablets
+=========================== */
 
-.proj-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: auto;
+@media (max-width: 992px) {
+
+    .proj-grid {
+        grid-template-columns: repeat(2, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
 }
 
-.proj-link {
-    text-decoration: none;
-    color: var(--neon3);
-    font-size: .82rem;
+/* ===========================
+   Mobile
+=========================== */
 
-    border-bottom: .5px solid var(--border2);
-
-    transition: .25s;
-}
-
-.proj-link:hover {
-    color: #fff;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width:768px) {
+@media (max-width: 768px) {
 
     .proj-grid {
         grid-template-columns: 1fr;
-        justify-items: center;
+        gap: 1.5rem;
     }
 
     .proj-card {
         max-width: 100%;
-        min-height: auto;
     }
 
     .proj-img {
-        height: 190px;
+        aspect-ratio: 16 / 10;
     }
+
+    .proj-body {
+        padding: 18px;
+    }
+
+    .proj-title {
+        font-size: 1.2rem;
+    }
+
+    .proj-desc {
+        font-size: .9rem;
+        min-height: auto;
+        -webkit-line-clamp: 5;
+    }
+
 }
 
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width: 480px) {
+
+    .proj-filter {
+        justify-content: center;
+    }
+
+    .pf-btn {
+        font-size: .75rem;
+        padding: 6px 12px;
+    }
+
+    .proj-body {
+        padding: 16px;
+    }
+
+    .proj-title {
+        font-size: 1.1rem;
+    }
+
+    .proj-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
 /* =========================
    GITHUB
 ========================= */
@@ -1412,18 +1400,15 @@
           </div>
           </div>
         </div>
-      </div>
         <div class="proj-card" data-cat="all fullstack web python ml">
         <div class="proj-img"><img src="ProjectPic/TruthLens.png" alt="TruthLens"></div>
         <div class="proj-body">
           <div class="proj-cat">Full Stack AI Web Development</div>
           <div class="proj-title">TurthLens</div>
           <div class="proj-desc">
-           TruthLens AI is an intelligent, full-stack fact-checking platform that automatically verifies factual claims, analyzes news articles, and detects misinformation. Instead of relying on a single source or LLM output, it searches live news APIs, extracts web content, and runs retrieved evidence through a hybrid ML pipeline combining TF-IDF semantic similarity with an INT8-quantized DistilBERT ONNX model (Natural Language Inference) to compute a confidence-scored verdict (Supported, Contradicted, or Neutral).
+           AI-powered fact-checking platform that verifies claims using live news retrieval, TF-IDF semantic similarity, and an ONNX-optimized DistilBERT NLI model to detect misinformation with confidence scoring.
           </div>
           <div class="proj-tags">
-            <span class="ptag">CSS</span>
-            <span class="ptag">JavaScript</span>
             <span class="ptag">FastAPI</span>
             <span class="ptag">NodeJs</span>
             <span class="ptag">React</span>
