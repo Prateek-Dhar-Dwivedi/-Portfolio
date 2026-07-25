@@ -582,163 +582,232 @@
       line-height: 1.75
     }
 
-    /* PROJECTS */
-    .proj-filter {
-      display: flex;
-      gap: .5rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem
-    }
+    /* =========================
+   PROJECTS
+========================= */
 
-    .pf-btn {
-      background: var(--card);
-      border: .5px solid var(--border);
-      border-radius: 100px;
-      padding: 6px 16px;
-      font-size: .8rem;
-      color: var(--text2);
-      cursor: pointer;
-      transition: all .2s;
-      font-family: var(--sans)
-    }
+.proj-filter {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
 
-    .pf-btn.active,
-    .pf-btn:hover {
-      background: var(--neon);
-      color: #fff;
-      border-color: var(--neon)
-    }
+.pf-btn {
+    background: var(--card);
+    border: 0.5px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    color: var(--text2);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: var(--sans);
+}
 
-    .proj-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem
-    }
+.pf-btn.active,
+.pf-btn:hover {
+    background: var(--neon);
+    color: #fff;
+    border-color: var(--neon);
+}
 
-    .proj-card {
-      background: linear-gradient(145deg,
-          rgba(26, 34, 54, .95),
-          rgba(17, 24, 39, .95));
-      border: 1px solid rgba(99, 102, 241, .2);
-      border-radius: 20px;
-      overflow: hidden;
-      transition: .35s;
-    }
+/* GRID */
 
-    .proj-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(99, 102, 241, .2);
-    }
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 360px));
+    justify-content: center;
+    gap: 2rem;
+}
 
-    /* .proj-img {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-      background: var(--card2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      color: var(--text3)
-    }
+/* CARD */
 
-    .proj-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover
-    } old css*/
+.proj-card {
+    width: 100%;
+    max-width: 360px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+        145deg,
+        rgba(26, 34, 54, 0.95),
+        rgba(17, 24, 39, 0.95)
+    );
+
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+
+    transition: all 0.35s ease;
+}
+
+.proj-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(99, 102, 241, 0.22);
+}
+
+/* IMAGE */
+
 .proj-img {
-    height: 240px;
+    width: 100%;
+    height: 210px;
+    background: #111827;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .proj-img img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background: #111827;
 }
-    .proj-body {
-      padding: 1.25rem 1.4rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1
+
+/* BODY */
+
+.proj-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 1.2rem 1.3rem;
+}
+
+/* CATEGORY */
+
+.proj-cat {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.45rem;
+}
+
+/* TITLE */
+
+.proj-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+    line-height: 1.3;
+}
+
+/* DESCRIPTION */
+
+.proj-desc {
+    flex: 1;
+
+    font-size: 0.85rem;
+    color: var(--text2);
+    line-height: 1.6;
+
+    margin-bottom: 1rem;
+}
+
+/* TAGS */
+
+.proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1rem;
+}
+
+.ptag {
+    padding: 3px 8px;
+
+    background: rgba(34, 211, 238, 0.08);
+    border: 0.5px solid rgba(34, 211, 238, 0.2);
+
+    border-radius: 5px;
+
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--cyan);
+}
+
+/* LINKS */
+
+.proj-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.proj-link {
+    text-decoration: none;
+    font-size: 0.82rem;
+
+    color: var(--neon3);
+
+    border-bottom: 0.5px solid var(--border2);
+
+    padding-bottom: 2px;
+
+    transition: 0.25s;
+}
+
+.proj-link:hover {
+    color: #fff;
+    border-color: var(--neon3);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .proj-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1.5rem;
     }
 
-    .proj-cat {
-      font-family: var(--mono);
-      font-size: .68rem;
-      color: var(--cyan);
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      margin-bottom: .4rem
+    .proj-card {
+        max-width: 100%;
+    }
+
+    .proj-img {
+        height: 190px;
+    }
+
+    .proj-body {
+        padding: 1rem;
     }
 
     .proj-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: .5rem
+        font-size: 1rem;
     }
 
     .proj-desc {
-      font-size: .85rem;
-      color: var(--text2);
-      line-height: 1.7;
-      flex: 1;
-      margin-bottom: 1rem
+        font-size: 0.82rem;
     }
+}
 
-    .proj-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 1rem
-    }
+/* =========================
+   GITHUB STATS
+========================= */
 
-    .ptag {
-      background: rgba(34, 211, 238, .07);
-      border: .5px solid rgba(34, 211, 238, .2);
-      border-radius: 4px;
-      padding: 2px 7px;
-      font-family: var(--mono);
-      font-size: .7rem;
-      color: var(--cyan)
-    }
+.github-section {
+    background: var(--bg2);
+}
 
-    .proj-links {
-      display: flex;
-      gap: 1rem
-    }
+.github-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
 
-    .proj-link {
-      font-size: .8rem;
-      color: var(--neon3);
-      text-decoration: none;
-      border-bottom: .5px solid var(--border2);
-      padding-bottom: 1px;
-      transition: color .2s
-    }
-
-    .proj-link:hover {
-      color: #fff
-    }
-
-    /* GITHUB STATS */
-    .github-section {
-      background: var(--bg2)
-    }
-
-    .github-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem
-    }
-
-    .gh-img {
-      width: 100%;
-      border-radius: 10px;
-      border: .5px solid var(--border)
-    }
-
+.gh-img {
+    width: 100%;
+    border-radius: 10px;
+    border: 0.5px solid var(--border);
+}
     /* EDUCATION */
     .edu-grid {
       display: grid;
@@ -1325,10 +1394,10 @@
           </div>
         </div>
       </div>
-        <div class="proj-card" data-cat="fullstack web python ml">
+        <div class="proj-card" data-cat="all fullstack web python ml">
         <div class="proj-img"><img src="ProjectPic/TruthLens.png" alt="TruthLens"></div>
         <div class="proj-body">
-          <div class="proj-cat">Full Stack Web Development</div>
+          <div class="proj-cat">Full Stack AI Web Development</div>
           <div class="proj-title">TurthLens</div>
           <div class="proj-desc">
            TruthLens AI is an intelligent, full-stack fact-checking platform that automatically verifies factual claims, analyzes news articles, and detects misinformation. Instead of relying on a single source or LLM output, it searches live news APIs, extracts web content, and runs retrieved evidence through a hybrid ML pipeline combining TF-IDF semantic similarity with an INT8-quantized DistilBERT ONNX model (Natural Language Inference) to compute a confidence-scored verdict (Supported, Contradicted, or Neutral).
