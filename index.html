@@ -427,7 +427,38 @@
       max-width: 520px;
       margin-bottom: 3rem
     }
+/*Mobile CSS*/
+  @media (max-width: 768px) {
 
+  .hero {
+    min-height: auto;
+    padding: 110px 20px 60px;
+  }
+
+  .hero-inner {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.15;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-bio {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+}
     /* ABOUT */
     .about-grid {
       display: grid;
