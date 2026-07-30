@@ -739,6 +739,31 @@
       border-radius: 10px;
       border: .5px solid var(--border)
     }
+
+  /*Mobile Display*/
+
+  @media (max-width: 768px) {
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  h1.hero-title {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.15;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-bio {
+    max-width: 100%;
+  }
+
+  .hero-ctas {
+    flex-wrap: wrap;
+  }
+}
 /* =========================
    GITHUB
 ========================= */
