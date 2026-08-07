@@ -13,7 +13,48 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <style>
-   /* ==============================
+   
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg: #080b12;
+      --bg2: #0d1117;
+      --bg3: #111827;
+      --card: #111827;
+      --card2: #1a2236;
+      --border: rgba(99, 102, 241, 0.15);
+      --border2: rgba(99, 102, 241, 0.35);
+      --neon: #6366f1;
+      --neon2: #818cf8;
+      --neon3: #a5b4fc;
+      --cyan: #22d3ee;
+      --green: #10b981;
+      --text: #f1f5f9;
+      --text2: #94a3b8;
+      --text3: #475569;
+      --sans: 'Space Grotesk', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.7;
+      overflow-x: hidden
+    }
+
+  /* ==============================
            HERO
         ============================== */
 
@@ -414,46 +455,6 @@
                 left: 5px;
             }
         }
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0
-    }
-
-    :root {
-      --bg: #080b12;
-      --bg2: #0d1117;
-      --bg3: #111827;
-      --card: #111827;
-      --card2: #1a2236;
-      --border: rgba(99, 102, 241, 0.15);
-      --border2: rgba(99, 102, 241, 0.35);
-      --neon: #6366f1;
-      --neon2: #818cf8;
-      --neon3: #a5b4fc;
-      --cyan: #22d3ee;
-      --green: #10b981;
-      --text: #f1f5f9;
-      --text2: #94a3b8;
-      --text3: #475569;
-      --sans: 'Space Grotesk', sans-serif;
-      --mono: 'JetBrains Mono', monospace;
-    }
-
-    html {
-      scroll-behavior: smooth
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      line-height: 1.7;
-      overflow-x: hidden
-    }
-
     /*Image*/
     .avatar-ring {
       width: 260px;
