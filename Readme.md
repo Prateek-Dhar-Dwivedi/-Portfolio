@@ -1,6 +1,6 @@
 <div align="center">
   
-###  Prateek Dhar Dwivedi — Portfolio
+#  Prateek Dhar Dwivedi — Portfolio
 
 </div>
 <div align="center">
