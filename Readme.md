@@ -1,4 +1,4 @@
-# 🚀 Prateek Dhar Dwivedi — Portfolio
+#  Prateek Dhar Dwivedi — Portfolio
 
 <div align="center">
 
