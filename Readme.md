@@ -1,7 +1,8 @@
 <div align="center">
-#  Prateek Dhar Dwivedi — Portfolio
+###  Prateek Dhar Dwivedi — Portfolio
 </div>
 
+<div align="center">
 
 ### 👨‍💻 AI/ML Engineer • Full Stack Developer • Problem Solver
 
